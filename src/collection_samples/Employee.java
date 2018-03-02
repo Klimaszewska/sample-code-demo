@@ -1,5 +1,5 @@
 package collection_samples;
 
 public class Employee {
-    // test
+    // test text
 }
