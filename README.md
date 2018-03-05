@@ -5,8 +5,9 @@ This is a sample repository I use when learning Java on my own. It focuses on Ja
 
 **So far I have used the following:**
 * the Builder design pattern
-* basic JSP handling
-* Maven support.
+* JSP handling
+* Servlets
+* Maven support
 
 **More to be added soon!**
 
@@ -14,4 +15,4 @@ This is a sample repository I use when learning Java on my own. It focuses on Ja
 
 **Other repositories**
 
-Please refer to my other repository (LegalEnglishFlashcards) to see samples of my code for Android.
+Please refer to my other repository [(LegalEnglishFlashcards)](https://github.com/Klimaszewska/LegalEnglishFlashcardsApp) to see samples of my code for Android.
