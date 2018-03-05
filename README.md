@@ -10,7 +10,7 @@ This is a sample repository I use when learning Java on my own. It focuses on Ja
 
 **More to be added soon!**
 
-
+---
 
 **Other repositories**
 
