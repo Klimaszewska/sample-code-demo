@@ -68,6 +68,13 @@ public class Employee {
         private EmployeeGender gender;
         private Date hireDate;
 
+        //the required arguments are employeeId and lastName
+        public EmployeeBuilder(int employeeId, String lastName) {
+            this.employeeId = employeeId;
+            this.lastName = lastName;
+        }
+
+        //the remaining arguments are optional
         public EmployeeBuilder employeeId(int employeeId) {
             this.employeeId = employeeId;
             return this;
@@ -91,6 +98,10 @@ public class Employee {
         public EmployeeBuilder hireDate(Date hireDate){
             this.hireDate = hireDate;
             return this;
+        }
+
+        public Employee build(){
+            return new Employee(this);
         }
     }
 }

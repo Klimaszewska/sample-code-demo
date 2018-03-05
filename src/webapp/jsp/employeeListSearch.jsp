@@ -9,12 +9,9 @@
 <body>
 
 <p>
-    <b>Employee Base</b>
+    <b>Employee Base Dynamic Content</b>
 </p>
 
-<p>
-    <jsp:include page="employeeListSearch.jsp"/>
-</p>
 
 </body>
 </html>
