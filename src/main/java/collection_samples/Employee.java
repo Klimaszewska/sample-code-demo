@@ -59,6 +59,15 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
+    @Override
+    public String toString() {
+        return  "ID: " + employeeId +
+                ", name: " + firstName +
+                ", surname: " + lastName +
+                ", gender: " + gender +
+                ", hired on: " + hireDate +
+                '.';
+    }
 
     //a nested, static builder class
     public static class EmployeeBuilder{

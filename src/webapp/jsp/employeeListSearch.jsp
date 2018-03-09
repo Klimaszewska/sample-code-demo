@@ -11,6 +11,12 @@
 <p>
     <b>Employee Base Dynamic Content</b>
 </p>
+<p>
+    <c:forEach items="${employeeList}" var="employee">
+        ${employee}
+        <hr>
+    </c:forEach>
+</p>
 
 
 </body>
