@@ -9,6 +9,8 @@ This is a sample repository I use when learning Java on my own. It focuses on Ja
 * Servlets
 * Maven support
 
+
+
 **Screenshot**
 
 ![ScreenShot](https://raw.github.com/klimaszewska/sample-code-demo/master/jsp-repo.jpg)
