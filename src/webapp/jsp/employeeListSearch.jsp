@@ -12,8 +12,10 @@
     <b>Employee Base Dynamic Content</b>
 </p>
 <p>
+    <c:set var="counter" scope="page" value="1"/>
     <c:forEach items="${employeeList}" var="employee">
-        ${employee}
+        ${counter}. ${employee}
+        <c:set var="counter" value="${counter + 1}" scope="page"/>
         <hr>
     </c:forEach>
 </p>
