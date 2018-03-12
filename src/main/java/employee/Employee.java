@@ -1,12 +1,27 @@
 package employee;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table (name = "employees_table")
 public class Employee {
+
+    @Id
+    @GeneratedValue(generator = "incrementor")
+    @Column(name = "employeeId")
     private int employeeId;
+
+    @Column(name = "firstName")
     private String firstName;
+
+    @Column(name = "lastName")
     private String lastName;
+
+    @Column(name = "gender")
     private EmployeeGender gender;
+
+    @Column(name = "hireDate")
     private Date hireDate;
 
     //private constructor which refers to the builder
@@ -16,6 +31,10 @@ public class Employee {
         this.lastName = builder.lastName;
         this.gender = builder.gender;
         this.hireDate = builder.hireDate;
+    }
+
+    public Employee(){
+
     }
 
     //getters and setters
