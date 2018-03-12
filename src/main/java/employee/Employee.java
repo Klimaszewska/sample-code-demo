@@ -1,4 +1,4 @@
-package collection_samples;
+package employee;
 
 import java.util.Date;
 

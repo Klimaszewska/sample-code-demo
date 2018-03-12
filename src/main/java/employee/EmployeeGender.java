@@ -1,4 +1,4 @@
-package collection_samples;
+package employee;
 
 public enum EmployeeGender {
     M,

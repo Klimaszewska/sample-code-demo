@@ -1,4 +1,7 @@
-package collection_samples;
+package main;
+
+import employee.Employee;
+import employee.EmployeeGender;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

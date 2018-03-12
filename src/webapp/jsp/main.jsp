@@ -22,7 +22,7 @@
 </p>
 
 <div>
-<form action="/post" method="post">
+<form action="/register" method="post">
     <p><b>Add employee details</b></p>
     <p>
     Employee ID:<br>
