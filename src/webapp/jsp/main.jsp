@@ -17,10 +17,7 @@
 
 <p>
     <br><br>
-    In some time, you will be able to add employees to this list.
-    <br>
-    <c:out value="${'There is no need to use any <html> tags.'}" escapeXml="true"/>
-    You will just fill in a form.
+    Please fill in the form.
     <br><br>
 </p>
 

@@ -17,7 +17,23 @@ public class MainServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.setAttribute("employeeList", employeeList());
+
         //RequestDispatcher used for linking the MainServlet class with the selected jsp file
+        req.getRequestDispatcher("main.jsp").forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        Integer employeeId = Integer.parseInt(req.getParameter("employeeId"));
+        String lastName = req.getParameter("lastName");
+        String firstName = req.getParameter("firstName");
+        EmployeeGender gender = EmployeeGender.valueOf(req.getParameter("gender"));
+        Date hireDate = Date.valueOf(req.getParameter("hireDate"));
+
+        Employee employee = new Employee.EmployeeBuilder(employeeId, lastName).firstName(firstName).gender(gender).hireDate(hireDate).build();
+
+
         req.getRequestDispatcher("main.jsp").forward(req, resp);
     }
 
@@ -29,7 +45,7 @@ public class MainServlet extends HttpServlet {
         Employee employee5 = new Employee.EmployeeBuilder(5, "Bruege").firstName("Katherine").build();
         Employee employee6 = new Employee.EmployeeBuilder(6, "Cooper").firstName("Andrew").build();
         Employee employee7 = new Employee.EmployeeBuilder(7, "Mark").firstName("Adan").build();
-        List<Employee> employeeList = new ArrayList<Employee>();
+        List<Employee> employeeList = new ArrayList<>();
         employeeList.add(employee1);
         employeeList.add(employee2);
         employeeList.add(employee3);
