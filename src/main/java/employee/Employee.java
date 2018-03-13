@@ -8,14 +8,14 @@ import java.util.Date;
 public class Employee {
 
     @Id
-    @GeneratedValue(generator = "incrementor")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "employeeId")
     private int employeeId;
 
     @Column(name = "firstName")
     private String firstName;
 
-    @Column(name = "lastName")
+    @Column(name = "lastName", nullable = false)
     private String lastName;
 
     @Column(name = "gender")
@@ -34,7 +34,6 @@ public class Employee {
     }
 
     public Employee(){
-
     }
 
     //getters and setters

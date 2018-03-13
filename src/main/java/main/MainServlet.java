@@ -2,6 +2,8 @@ package main;
 
 import employee.Employee;
 import employee.EmployeeGender;
+import employee.EmployeeRepository;
+import utilities.HibernateUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,6 +38,8 @@ public class MainServlet extends HttpServlet {
 
         Employee employee = new Employee.EmployeeBuilder(employeeId, lastName).firstName(firstName).gender(gender).hireDate(hireDate).build();
 
+        EmployeeRepository employeeRepository = new EmployeeRepository();
+        employeeRepository.addPEmployee(HibernateUtil.getSessionFactory(), employee);
 
         req.getRequestDispatcher("main.jsp").forward(req, resp);
     }

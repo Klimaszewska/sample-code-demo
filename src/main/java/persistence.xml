@@ -1,3 +1,4 @@
+<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -7,7 +8,7 @@
 
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/sample-code-demo-database?createDatabaseIfNotExist=true"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/sample-code-demo-database?createDatabaseIfNotExist=true"/>
             <property name="hibernate.connection.autocommit" value="false"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value=""/>
@@ -18,15 +19,15 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
 
-            <!-- use encache provider-->
-            <!--<property name="hibernate.cache.region.factory_class"-->
-            <!--value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>-->
-            <!--<property name="hibernate.javax.cache.provider" value="org.ehcache.jsr107.EhcacheCachingProvider"/>-->
-            <!--&lt;!&ndash;use second level cache&ndash;&gt;-->
-            <!--<property name="hibernate.cache.use_second_level_cache" value="true"/>-->
-            <!--&lt;!&ndash;use 3rd level cache&ndash;&gt;-->
-            <!--<property name="hibernate.cache.use_query_cache" value="true"/>-->
+            &lt;!&ndash; use encache provider&ndash;&gt;
+            &lt;!&ndash;<property name="hibernate.cache.region.factory_class"&ndash;&gt;
+            &lt;!&ndash;value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>&ndash;&gt;
+            &lt;!&ndash;<property name="hibernate.javax.cache.provider" value="org.ehcache.jsr107.EhcacheCachingProvider"/>&ndash;&gt;
+            &lt;!&ndash;&lt;!&ndash;use second level cache&ndash;&gt;&ndash;&gt;
+            &lt;!&ndash;<property name="hibernate.cache.use_second_level_cache" value="true"/>&ndash;&gt;
+            &lt;!&ndash;&lt;!&ndash;use 3rd level cache&ndash;&gt;&ndash;&gt;
+            &lt;!&ndash;<property name="hibernate.cache.use_query_cache" value="true"/>&ndash;&gt;
 
         </properties>
     </persistence-unit>
-</persistence>
+</persistence>-->
