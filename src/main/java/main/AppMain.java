@@ -34,13 +34,12 @@ public class AppMain {
 
     private static List<Employee> createListOfEmployees(){
         List<Employee> employeeList = new ArrayList<>();
-        employeeList.add(new Employee.EmployeeBuilder(1, "Kowalski").firstName("Jan").gender(EmployeeGender.M).hireDate(Date.valueOf("2016-01-08")).build());
-        employeeList.add(new Employee.EmployeeBuilder(2, "Nowak").firstName("Anna").gender(EmployeeGender.F).hireDate(Date.valueOf("2016-01-01")).build());
-        employeeList.add(new Employee.EmployeeBuilder(3, "Johnson").firstName("Thomas").gender(EmployeeGender.M).hireDate(Date.valueOf("2017-03-02")).build());
-        employeeList.add(new Employee.EmployeeBuilder(4, "Jacobsen").firstName("Eric").gender(EmployeeGender.X).hireDate(Date.valueOf("2018-03-20")).build());
-        employeeList.add(new Employee.EmployeeBuilder(5, "Bruege").firstName("Katherine").build());
-        employeeList.add(new Employee.EmployeeBuilder(6, "Cooper").firstName("Andrew").build());
-        employeeList.add(new Employee.EmployeeBuilder(7, "Mark").firstName("Adan").build());
+        employeeList.add(new Employee.EmployeeBuilder("Kowalski", "Marian").gender(EmployeeGender.M).hireDate(Date.valueOf("2016-01-08")).build());
+        employeeList.add(new Employee.EmployeeBuilder("Nowak", "Anna").gender(EmployeeGender.F).hireDate(Date.valueOf("2016-01-01")).build());
+        employeeList.add(new Employee.EmployeeBuilder("Jacobsen", "Eric").gender(EmployeeGender.X).hireDate(Date.valueOf("2018-03-20")).build());
+        employeeList.add(new Employee.EmployeeBuilder("Bruege", "Kate").gender(EmployeeGender.F).build());
+        employeeList.add(new Employee.EmployeeBuilder("Cooper", "Mark").build());
+        employeeList.add(new Employee.EmployeeBuilder("Mark", "Stephanie").build());
     return employeeList;
     }
 }

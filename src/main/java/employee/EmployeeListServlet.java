@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet (name = "EmployeeListServlet", value = "/displayEmployees")
+@WebServlet (name = "EmployeeListServlet", value = "/displayEmployee")
 public class EmployeeListServlet extends HttpServlet {
 
     private EmployeeRepository employeeRepository = new EmployeeRepository();

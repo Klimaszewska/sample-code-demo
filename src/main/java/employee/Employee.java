@@ -12,7 +12,7 @@ public class Employee {
     @Column(name = "employeeId")
     private int employeeId;
 
-    @Column(name = "firstName")
+    @Column(name = "firstName", nullable = false)
     private String firstName;
 
     @Column(name = "lastName", nullable = false)
@@ -95,10 +95,10 @@ public class Employee {
         private EmployeeGender gender;
         private Date hireDate;
 
-        //the required arguments are employeeId and lastName
-        public EmployeeBuilder(int employeeId, String lastName) {
-            this.employeeId = employeeId;
+        //the required arguments are lastName and first name
+        public EmployeeBuilder(String lastName, String firstName) {
             this.lastName = lastName;
+            this.firstName = firstName;
         }
 
         //the remaining arguments are optional
