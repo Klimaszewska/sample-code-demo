@@ -10,6 +10,11 @@ import java.util.List;
 
 public class EmployeeRepository {
 
+    public Employee getEmployee(int employeeId){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        return session.get(Employee.class, employeeId);
+    }
+
    public void addPEmployee(SessionFactory sessionFactory, Employee employee){
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
             Transaction transaction = null;
@@ -25,6 +30,22 @@ public class EmployeeRepository {
             }
         }
    }
+
+    public void deleteEmployee (int employeeId) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Transaction transaction = null;
+            try {
+                transaction = session.beginTransaction();
+                session.delete(getEmployee(employeeId));
+                transaction.commit();
+            } catch (RuntimeException e) {
+                if (transaction != null) {
+                    transaction.rollback();
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
    public List <Employee> getListOfAllEmployees(){
        Session session = HibernateUtil.getSessionFactory().openSession();

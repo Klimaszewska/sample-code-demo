@@ -39,14 +39,26 @@
 
 <hr>
 
-<p>
-    <c:set var="counter" scope="page" value="1"/>
-    <c:forEach items="${employeeList}" var="employee">
-        ${counter}. ${employee}
-        <c:set var="counter" value="${counter + 1}" scope="page"/>
-<hr>
-</c:forEach>
-</p>
+<div>
+    <table>
+        <c:set var="counter" scope="page" value="1"/>
+        <c:forEach items="${employeeList}" var="employee">
+            <tr>
+                <td>
+                        ${counter}. ${employee}
+                    <c:set var="counter" value="${counter + 1}" scope="page"/>
+                </td>
+                <td>
+                    <form action="/delete" method="get">
+                        <button type="submit" class="btn btn-outline-primary" name="employeeId"
+                                value="${employee.employeeId}">Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+</div>
 
 <div>
 
